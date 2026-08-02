@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Workout Library</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="layout">
+
+
+<aside class="sidebar">
+
+<h2>💪 Workout Dashboard</h2>
+
+
+<nav>
+
+<a href="index.html">
+🏠 Dashboard
+</a>
+
+
+<a href="workouts.html" class="active">
+🎥 Workout Library
+</a>
+
+
+<a href="add-workout.html">
+➕ Add Workout
+</a>
+
+
+<a href="planner.html">
+📅 Workout Planner
+</a>
+
+<a href="progress.html">
+📈 Progress
+</a>
+
+</nav>
+
+</aside>
+
+
+
+<main class="content">
+
+
+<h1>Workout Library</h1>
+
+
+<div class="search-box">
+
+<input 
+id="searchInput"
+placeholder="Search workout..."
+>
+
+</div>
+
+<div class="filters">
+
+
+<h3>Duration</h3>
+
+<label>
+<input type="checkbox" class="duration-filter" value="5">
+5 min
+</label>
+
+
+<label>
+<input type="checkbox" class="duration-filter" value="10">
+10 min
+</label>
+
+
+<label>
+<input type="checkbox" class="duration-filter" value="15">
+15 min
+</label>
+
+
+<label>
+<input type="checkbox" class="duration-filter" value="30">
+30+ min
+</label>
+
+
+
+<h3>Occasion</h3>
+
+
+<label>
+<input type="checkbox" class="occasion-filter" value="Morning">
+Morning
+</label>
+
+
+<label>
+<input type="checkbox" class="occasion-filter" value="After Meal">
+After Meal
+</label>
+
+
+<label>
+<input type="checkbox" class="occasion-filter" value="Night">
+Night
+</label>
+
+
+
+<h3>Target</h3>
+
+
+<label>
+<input type="checkbox" class="target-filter" value="Abs">
+Abs
+</label>
+
+
+<label>
+<input type="checkbox" class="target-filter" value="Back">
+Back
+</label>
+
+
+<label>
+<input type="checkbox" class="target-filter" value="Leg">
+Leg
+</label>
+
+
+<label>
+<input type="checkbox" class="target-filter" value="Posture">
+Posture
+</label>
+
+
+</div>
+
+<div class="quick-tags">
+
+
+<button onclick="filterTag('')">
+All
+</button>
+
+
+<button onclick="filterTag('Stretch')">
+🧘 Stretch
+</button>
+
+
+<button onclick="filterTag('Fat Burn')">
+🔥 Fat Burn
+</button>
+
+
+<button onclick="filterTag('Dance')">
+💃 Dance
+</button>
+
+
+<button onclick="filterTag('Leg')">
+🦵 Leg
+</button>
+
+
+<button onclick="filterTag('Arm')">
+💪 Arm
+</button>
+
+
+<button onclick="filterTag('Posture')">
+🧍 Posture
+</button>
+
+
+<button onclick="showFavorites()">
+⭐ Favorites
+</button>
+
+
+</div>
+
+
+<div id="workoutList" class="workout-container">
+
+</div>
+
+
+</main>
+
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/supabase.js"></script>
+
+<script src="js/workouts.js"></script>
+
+
+</body>
+
+</html>
