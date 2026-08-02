@@ -97,17 +97,15 @@ document.getElementById("duration").value
 
 
 targets:
-selectedTags.target.join(","),
-
+selectedTags.target,
 
 
 category:
-selectedTags.category.join(","),
-
+selectedTags.category,
 
 
 occasions:
-selectedTags.occasion.join(","),
+selectedTags.occasion,
 
 
 
