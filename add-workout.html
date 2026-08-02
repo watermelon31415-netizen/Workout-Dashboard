@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Add Workout</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="layout">
+
+
+<aside class="sidebar">
+
+<h2>💪 Workout Dashboard</h2>
+
+
+<nav>
+
+<a href="index.html">
+🏠 Dashboard
+</a>
+
+
+<a href="workouts.html">
+🎥 Workout Library
+</a>
+
+
+<a href="add-workout.html" class="active">
+➕ Add Workout
+</a>
+
+
+<a href="planner.html">
+📅 Workout Planner
+</a>
+
+<a href="progress.html">
+📈 Progress
+</a>
+
+</nav>
+
+
+</aside>
+
+
+
+<main class="content">
+
+
+<h1>Add Workout</h1>
+
+
+<div class="welcome-card">
+
+
+<input id="title"
+placeholder="Workout name">
+
+
+<input id="video_url"
+placeholder="Video URL">
+
+<input 
+type="file"
+id="imageInput"
+accept="image/*">
+
+
+<input id="duration"
+type="number"
+placeholder="Duration (minutes)">
+
+
+<input id="category"
+placeholder="Category">
+
+
+<h3>
+Target
+</h3>
+
+<div id="targetTags"
+class="tag-box">
+
+</div>
+
+
+
+<h3>
+Category
+</h3>
+
+
+<div id="categoryTags"
+class="tag-box">
+
+</div>
+
+
+
+<h3>
+Occasion
+</h3>
+
+
+<div id="occasionTags"
+class="tag-box">
+
+</div>
+placeholder="Targets (example: Abs, Core, Waist)">
+
+
+
+<input id="occasions"
+placeholder="Occasions (example: Morning,Night)">
+
+
+
+<input id="difficulty"
+placeholder="Difficulty">
+
+
+
+<textarea id="notes"
+placeholder="Notes"></textarea>
+
+
+<button onclick="saveWorkout()">
+Save Workout
+</button>
+
+
+</div>
+
+
+</main>
+
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/supabase.js"></script>
+
+<script src="js/tags.js"></script>
+
+<script src="js/add-tags.js"></script>
+
+<script src="js/add-workout.js"></script>
+
+
+</body>
+
+</html>
