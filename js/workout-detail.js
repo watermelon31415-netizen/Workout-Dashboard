@@ -146,92 +146,57 @@ ${data.favorite ? "⭐ Remove Favorite" : "☆ Favorite"}
 }
 
 
-async function completeWorkout(){
+async function completeWorkout(id){
 
 
-const user = await getCurrentUser();
+    const user = await getCurrentUser();
 
 
+    if(!user){
 
-if(!user){
+        alert("Please login first");
 
-alert("Please login first");
+        return;
 
-return;
-
-}
-
+    }
 
 
-const today =
-new Date()
-.toISOString()
-.split("T")[0];
-
-
-
-const {error}=await supabaseClient
-.from("workout_history")
-.insert([{
-
-
-workout_id:
-currentWorkout.id,
-
-
-completed_date:
-today,
-
-
-user_id:
-user.id
-
-
-}]);
+    const today =
+    new Date()
+    .toISOString()
+    .split("T")[0];
 
 
 
-if(error){
+    const {error}=await supabaseClient
+    .from("workout_history")
+    .insert([{
 
-console.log(error);
+        workout_id:id,
 
-alert(error.message);
+        completed_date:today,
 
-return;
+        user_id:user.id
 
-}
+    }]);
 
 
 
-alert(
-"Workout completed 🎉"
-);
+    if(error){
 
+        console.log(error);
+
+        alert("Failed");
+
+        return;
+
+    }
+
+
+    alert("Workout completed 🎉");
 
 
 }
-
-
-
-if(error){
-
-console.log(error);
-
-alert("Failed");
-
-return;
-
-}
-
-
-
-alert(
-"Workout completed 🎉"
-);
-
-
-}
-
 
 
 
