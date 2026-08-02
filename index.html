@@ -14,52 +14,92 @@
     <div class="layout">
 
         <!-- Sidebar -->
-        <aside class="sidebar">
 
-            <h2>💪 Workout Dashboard</h2>
+<!-- Sidebar -->
+<aside class="sidebar">
 
-<div class="user-info">
+    <h2>
+        💪 Workout Dashboard
+    </h2>
 
-    <p id="userEmail">
-        Guest
-    </p>
 
-    <button id="loginBtn" onclick="window.location.href='login.html'">
-        🔑 Login
-    </button>
+    <div class="user-info">
 
-    <button id="logoutBtn" onclick="logout()" style="display:none;">
-        🚪 Logout
-    </button>
+        <p id="userEmail">
+            Guest
+        </p>
 
-</div>
 
-<nav>
+        <button 
+        id="loginBtn" 
+        onclick="window.location.href='login.html'">
 
-                <a href="index.html" class="active">
-                    🏠 Dashboard
-                </a>
+            🔑 Login
 
-                <a href="#">
-                    🎥 Workout Library
-                </a>
+        </button>
 
-                <a href="#">
-                    ➕ Add Workout
-                </a>
 
-                <a href="#">
-                    📅 Workout Planner
-                </a>
+        <button 
+        id="logoutBtn" 
+        onclick="logout()" 
+        style="display:none;">
 
-                <a href="progress.html">
-📈 Progress
-</a>
+            🚪 Logout
 
-            </nav>
+        </button>
 
-        </aside>
 
+    </div>
+
+
+
+    <nav>
+
+
+        <a href="index.html" class="active">
+
+            🏠 Dashboard
+
+        </a>
+
+
+
+        <a href="workouts.html">
+
+            🎥 Workout Library
+
+        </a>
+
+
+
+        <a href="add-workout.html">
+
+            ➕ Add Workout
+
+        </a>
+
+
+
+        <a href="planner.html">
+
+            📅 Workout Planner
+
+        </a>
+
+
+
+        <a href="progress.html">
+
+            📈 Progress
+
+        </a>
+
+
+    </nav>
+
+
+</aside>
+        
         <!-- Main Content -->
        
        <main class="content">
