@@ -3,7 +3,6 @@ const workoutTags = {
 
 target:[
 
-"Abs",
 "Arm",
 "Leg",
 "Back",
